@@ -1,0 +1,83 @@
+@import "../variables";
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 100vh;
+  background-image: url("../assets/images/app-background.png");
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+.app-toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: $primary-background-color;
+  border-bottom: $primary-border;
+  min-height: 80px;
+}
+
+.app-toolbar-element {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-button {
+  color: $primary-color;
+  background: none !important;
+  border: none;
+
+}
+
+#app-toolbar-button>mat-icon {
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-toolbar-element:last-child {
+  align-items: flex-end !important;
+}
+
+.app-sidenav {
+  min-width: 320px;
+  background-color: $secondary-background-color;
+  color: $secondary-color;
+  border-left: $primary-border;
+  height: 100vh;
+
+}

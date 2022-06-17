@@ -1,0 +1,16 @@
+<div class="app-sidenav-container">
+  <div class="app-sidenav-header">
+    <h1>Menu</h1>
+  </div>
+  <div class="app-sidenav-container">
+    <ul>
+      <li><button>Startseite</button></li>
+      <li>
+        <button *ngFor="let nav of navigation" (click)="onSelectNav(nav.title)">
+          {{ nav.title }} <mat-icon>navigate_next</mat-icon>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="app-sidenav-footer"></div>
+</div>

@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'client-v1';
+  openSubNav: boolean = false;
+  selectedSideNav: string = '';
+
+  onSelectedNav(selectedNav: any){
+    console.log(selectedNav)
+    this.selectedSideNav = selectedNav
+    this.openSubNav = true;
+
+  }
+
 }

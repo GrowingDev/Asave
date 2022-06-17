@@ -1,0 +1,54 @@
+@import "../../../variables.scss";
+
+
+
+h1 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.icon-button {
+  color: $primary-color;
+  background: none !important;
+  border: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+
+  li {
+
+    margin: 0;
+
+
+    button {
+      display: flex;
+      border: none;
+      background-color: transparent;
+      width: 100%;
+      color: $secondary-color;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-align: start;
+      padding: 1rem;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    }
+
+    button:hover {
+      color: $primary-color
+    }
+
+    mat-icon {
+      color: $primary-color;
+    }
+  }
+}
+
+
+

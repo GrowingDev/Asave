@@ -1,0 +1,13 @@
+<div class="app-sidenav-container">
+  <div class="app-sidenav-header">
+    <h1>{{ selectedNav.title }}</h1>
+  </div>
+  <div class="app-sidenav-container">
+    <ul>
+      <li *ngFor="let child of selectedNav.children; let i = index;" >
+        <a [routerLink]="child.route">{{ child.title }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="app-sidenav-footer"></div>
+</div>
