@@ -10,6 +10,7 @@ import { Navigation } from '../../shared/models/navigation.model';
 })
 export class SidenavComponent implements OnInit {
   @Output() navSelected = new EventEmitter<string>();
+
   navigation: Navigation[] = [];
   constructor(private navService: NavigationService) { }
 
@@ -19,5 +20,6 @@ export class SidenavComponent implements OnInit {
   onSelectNav(nav: string){
 
     this.navSelected.emit(nav)
+
   }
 }

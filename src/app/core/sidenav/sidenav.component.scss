@@ -1,12 +1,20 @@
 @import "../../../variables.scss";
 
-
-
 h1 {
   margin: 0;
   text-transform: uppercase;
 }
-
+.app-sidenav-header {
+  height: 80px;
+  box-sizing: border-box;
+  color: $primary-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+}
 .icon-button {
   color: $primary-color;
   background: none !important;

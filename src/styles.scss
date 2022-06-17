@@ -45,25 +45,3 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-attachment: fixed;
 }
 
-.app-sidenav-container {
-  position: absolute;
-  right: 0;
-  top: 0;
-  min-width: 320px;
-  background-color: $secondary-background-color;
-  color: $secondary-color;
-  border-left: $primary-border;
-  height: 100vh;
-}
-
-.app-sidenav-header {
-  height: 80px;
-  box-sizing: border-box;
-  color: $primary-color;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1rem;
-}

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Navigation } from '../../shared/models/navigation.model';
 import { NavigationService } from '../../shared/navigation.service';
 
@@ -10,7 +10,7 @@ import { NavigationService } from '../../shared/navigation.service';
 })
 export class SidenavSubnavComponent implements OnInit {
   @Input() selectedSubNav: string = '';
-
+  @Output() toggleSideNav = new EventEmitter<boolean>();
 
   selectedNav: Navigation | any;
 
@@ -20,6 +20,9 @@ export class SidenavSubnavComponent implements OnInit {
   ngOnInit(): void {
     this.selectedNav = this.navService.getNavigationChildren(this.selectedSubNav);
   }
-
+  onSelectNav(route: string){
+    console.log(route)
+    this.toggleSideNav.emit(false);
+  }
 
 }

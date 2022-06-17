@@ -2,7 +2,11 @@
   <mat-toolbar class="app-toolbar" color="primary" aria-label="heading">
     <div class="app-toolbar-element"></div>
     <div class="app-toolbar-element">
-     <img src="../assets/images/app-logo.png" alt="" style="width: 120px; height:auto;">
+      <img
+        src="../assets/images/app-logo.png"
+        alt=""
+        style="width: 120px; height: auto"
+      />
     </div>
     <div class="app-toolbar-element">
       <button class="icon-button" mat-icon-button (click)="sidenav.toggle()">
@@ -11,10 +15,22 @@
     </div>
   </mat-toolbar>
 
-  <mat-sidenav-container >
-    <mat-sidenav fixedInViewport="true" #sidenav  position="end" mode="over" role="navigation" class="app-sidenav" opened="false">
+  <mat-sidenav-container>
+    <mat-sidenav
+      fixedInViewport="true"
+      #sidenav
+      position="end"
+      mode="over"
+      role="navigation"
+      class="app-sidenav"
+      opened="false"
+    >
       <app-sidenav (navSelected)="onSelectedNav($event)"></app-sidenav>
-      <app-sidenav-subnav *ngIf="openSubNav" [selectedSubNav]="selectedSideNav"></app-sidenav-subnav>
+      <app-sidenav-subnav
+        *ngIf="openSubNav"
+        [selectedSubNav]="selectedSideNav"
+        (toggleSideNav)="sidenav.toggle()"
+      ></app-sidenav-subnav>
     </mat-sidenav>
 
     <mat-sidenav-content>
