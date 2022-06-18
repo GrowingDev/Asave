@@ -9,7 +9,7 @@
       />
     </div>
     <div class="app-toolbar-element">
-      <button class="icon-button" mat-icon-button (click)="sidenav.toggle()">
+      <button class="icon-button toogle-button" mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
     </div>
@@ -23,12 +23,11 @@
       mode="over"
       role="navigation"
       class="app-sidenav"
-      opened="false"
+      
     >
       <app-sidenav (navSelected)="onSelectedNav($event)"></app-sidenav>
       <app-sidenav-subnav
-        *ngIf="openSubNav"
-        [selectedSubNav]="selectedSideNav"
+
         (toggleSideNav)="sidenav.toggle()"
       ></app-sidenav-subnav>
     </mat-sidenav>

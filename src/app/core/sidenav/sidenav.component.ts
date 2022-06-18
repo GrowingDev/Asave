@@ -9,7 +9,6 @@ import { Navigation } from '../../shared/models/navigation.model';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent implements OnInit {
-  @Output() navSelected = new EventEmitter<string>();
 
   navigation: Navigation[] = [];
   constructor(private navService: NavigationService) { }
@@ -17,9 +16,8 @@ export class SidenavComponent implements OnInit {
   ngOnInit(): void {
     this.navigation = this.navService.getNavigation()
   }
-  onSelectNav(nav: string){
-
-    this.navSelected.emit(nav)
-
+  onSelectNav(index: number) {
+    this.navService.onSelectNav(index)
+    console.log(index)
   }
 }

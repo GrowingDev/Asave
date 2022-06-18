@@ -1,5 +1,6 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import { Navigation } from '../../shared/models/navigation.model';
+import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Navigation } from 'src/app/shared/models/navigation.model';
 import { NavigationService } from '../../shared/navigation.service';
 
 
@@ -8,21 +9,32 @@ import { NavigationService } from '../../shared/navigation.service';
   templateUrl: './sidenav-subnav.component.html',
   styleUrls: ['./sidenav-subnav.component.scss']
 })
-export class SidenavSubnavComponent implements OnInit {
-  @Input() selectedSubNav: string = '';
-  @Output() toggleSideNav = new EventEmitter<boolean>();
-
-  selectedNav: Navigation | any;
-
-
+export class SidenavSubnavComponent implements OnInit, OnDestroy {
+  navigation: Navigation;
+  toggle: boolean = false;
+  private navChangeSub: Subscription;
+  private toogleChangeSub: Subscription;
+ 
   constructor(private navService: NavigationService) { }
 
-  ngOnInit(): void {
-    this.selectedNav = this.navService.getNavigationChildren(this.selectedSubNav);
+  ngOnInit() {
+     this.navChangeSub = this.navService.selectedNav
+     .subscribe((navigation) => {
+      this.navigation = navigation;
+     })
+     this.toogleChangeSub = this.navService.toogleState
+     .subscribe((toogleState => {
+      this.toggle = toogleState;
+     }))
   }
-  onSelectNav(route: string){
+
+  onSelectNav(route: string) {
     console.log(route)
-    this.toggleSideNav.emit(false);
+    this.navService.onToogleSubNav(false)
+  }
+
+  ngOnDestroy(): void {
+    this.navChangeSub.unsubscribe();
   }
 
 }

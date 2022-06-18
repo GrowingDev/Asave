@@ -1,12 +1,13 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Navigation } from './models/navigation.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NavigationService {
-
-  private navigation: Navigation[] = [
+  
+  private navigations: Navigation[] = [
     {
       title: 'Unternehmen',
       children: [
@@ -124,12 +125,32 @@ export class NavigationService {
       ]
     }
   ];
+  
+  toogleState = new Subject<boolean>();
+  toogleMainState = new Subject<boolean>();
+  selectedNav = new Subject<Navigation>();
+
   constructor() { }
 
+  onToogleSubNav(toogleState: boolean){
+    this.toogleState.next(toogleState)
+  }
+
+  loadTestData(){
+    
+  }
+  onToogleMainNav(toogleState: boolean){
+    this.toogleState.next(toogleState)
+  }
+  onSelectNav(index: number){
+    const navigation: Navigation = this.navigations[index];
+    this.toogleState.next(true);
+    this.selectedNav.next(navigation);
+  }
+
+
   getNavigation() {
-    return this.navigation.slice()
+    return this.navigations.slice()
   }
-  getNavigationChildren(nav: string){
-    return this.navigation.find(item => item.title == nav);
-  }
+
 }

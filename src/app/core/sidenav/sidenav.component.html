@@ -6,7 +6,7 @@
     <ul>
       <li><button>Startseite</button></li>
       <li>
-        <button *ngFor="let nav of navigation" (click)="onSelectNav(nav.title)">
+        <button *ngFor="let nav of navigation; let i = index;" (click)="onSelectNav(i)">
           {{ nav.title }} <mat-icon>navigate_next</mat-icon>
         </button>
       </li>
