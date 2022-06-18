@@ -141,6 +141,7 @@ export class NavigationService {
   }
   onToogleMainNav(toogleState: boolean){
     this.toogleState.next(toogleState)
+
   }
   onSelectNav(index: number){
     const navigation: Navigation = this.navigations[index];

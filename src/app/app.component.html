@@ -30,7 +30,7 @@
   
     >
       <app-sidenav (navSelected)="onSelectedNav($event)"></app-sidenav>
-      <app-sidenav-subnav (sidenav)="sidenav.toggle()"></app-sidenav-subnav>
+      <app-sidenav-subnav (sidenav)="sidenav.toggle()" (sidenav)="onToggle()"></app-sidenav-subnav>
     </mat-sidenav>
 
     <mat-sidenav-content>
