@@ -21,8 +21,8 @@ export class AppComponent implements OnInit {
     }))
   }
 
-  onToggle() {
-    this.navService.onToogleMainNav(!this.toggleState)
+  onToggle(toogleState: boolean) {
+    this.toggleState = toogleState;
   }
 
   onSelectedNav(selectedNav: any) {

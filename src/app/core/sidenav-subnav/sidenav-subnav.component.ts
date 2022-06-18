@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter, Input } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Navigation } from 'src/app/shared/models/navigation.model';
 import { NavigationService } from '../../shared/navigation.service';
@@ -14,7 +14,7 @@ export class SidenavSubnavComponent implements OnInit, OnDestroy {
   toggle: boolean = false;
   private navChangeSub: Subscription;
   private toogleChangeSub: Subscription;
- 
+  @Output() sidenav = new EventEmitter<boolean>();
   constructor(private navService: NavigationService) { }
 
   ngOnInit() {
@@ -30,7 +30,8 @@ export class SidenavSubnavComponent implements OnInit, OnDestroy {
 
   onSelectNav(route: string) {
     console.log(route)
-    this.navService.onToogleSubNav(false)
+    this.sidenav.emit(false)
+
   }
 
   ngOnDestroy(): void {

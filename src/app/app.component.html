@@ -9,7 +9,11 @@
       />
     </div>
     <div class="app-toolbar-element">
-      <button class="icon-button toogle-button" mat-icon-button (click)="sidenav.toggle()">
+      <button
+        class="icon-button toogle-button"
+        mat-icon-button
+        (click)="sidenav.toggle()"
+      >
         <mat-icon>menu</mat-icon>
       </button>
     </div>
@@ -23,13 +27,10 @@
       mode="over"
       role="navigation"
       class="app-sidenav"
-      
+  
     >
       <app-sidenav (navSelected)="onSelectedNav($event)"></app-sidenav>
-      <app-sidenav-subnav
-
-        (toggleSideNav)="sidenav.toggle()"
-      ></app-sidenav-subnav>
+      <app-sidenav-subnav (sidenav)="sidenav.toggle()"></app-sidenav-subnav>
     </mat-sidenav>
 
     <mat-sidenav-content>
