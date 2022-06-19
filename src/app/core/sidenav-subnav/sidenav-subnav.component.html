@@ -1,11 +1,29 @@
-<div class="app-sidenav-subnav" *ngIf="toggle">
+<div
+  [class]="
+    isSmallScreen
+      ? 'app-sidenav-subnav full-width'
+      : 'app-sidenav-subnav'
+  "
+  [@navState]="toggle ? 'open' : 'closed'"
+>
   <div class="app-sidenav-header">
     <h1>{{ navigation.title }}</h1>
+    <button class="icon-button" mat-icon-button (click)="onClose()">
+      <mat-icon>close</mat-icon>
+    </button>
   </div>
   <div>
     <ul>
-      <li *ngFor="let child of navigation.children; let i = index;" >
-        <button [routerLink]="child.route" (click)="onSelectNav(child.route)">{{ child.title }}</button>
+      <li *ngFor="let child of navigation.children; let i = index">
+        <button [routerLink]="child.route" (click)="onClose()">
+          {{ child.title }}
+        </button>
+      </li>
+      <li>
+        <button class="back-button" mat-icon-button (click)="onBack()">
+          <mat-icon>navigate_before</mat-icon>
+          Zurück
+        </button>
       </li>
     </ul>
   </div>

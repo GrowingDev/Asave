@@ -1,24 +1,4 @@
 <div class="app-container">
-  <mat-toolbar class="app-toolbar" color="primary" aria-label="heading">
-    <div class="app-toolbar-element"></div>
-    <div class="app-toolbar-element">
-      <img
-        src="../assets/images/app-logo.png"
-        alt=""
-        style="width: 120px; height: auto"
-      />
-    </div>
-    <div class="app-toolbar-element">
-      <button
-        class="icon-button toogle-button"
-        mat-icon-button
-        (click)="sidenav.toggle()"
-      >
-        <mat-icon>menu</mat-icon>
-      </button>
-    </div>
-  </mat-toolbar>
-
   <mat-sidenav-container>
     <mat-sidenav
       fixedInViewport="true"
@@ -26,14 +6,39 @@
       position="end"
       mode="over"
       role="navigation"
-      class="app-sidenav"
-  
+      [class]="isSmallScreen ? 'app-sidenav full-width' : 'app-sidenav'"
     >
-      <app-sidenav (navSelected)="onSelectedNav($event)"></app-sidenav>
-      <app-sidenav-subnav (sidenav)="sidenav.toggle()" (sidenav)="onToggle()"></app-sidenav-subnav>
+      <app-sidenav
+        (navSelected)="onSelectedNav($event)"
+        (sidenav)="sidenav.toggle()"
+      ></app-sidenav>
+      <app-sidenav-subnav
+        (sidenav)="sidenav.toggle()"
+ 
+        (sidenav)="onToggle()"
+      ></app-sidenav-subnav>
     </mat-sidenav>
 
     <mat-sidenav-content>
+      <mat-toolbar class="app-toolbar" color="primary" aria-label="heading">
+        <div class="app-toolbar-element"></div>
+        <div class="app-toolbar-element">
+          <img
+            src="../assets/images/app-logo.png"
+            alt=""
+            style="width: 120px; height: auto"
+          />
+        </div>
+        <div class="app-toolbar-element">
+          <button
+            class="icon-button"
+            mat-icon-button
+            (click)="sidenav.toggle()"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+      </mat-toolbar>
       <router-outlet> </router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>

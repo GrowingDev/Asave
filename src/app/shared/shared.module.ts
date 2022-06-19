@@ -4,7 +4,8 @@ import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-
+import {MatGridListModule} from '@angular/material/grid-list';
+import {LayoutModule} from '@angular/cdk/layout';
 @NgModule({
   declarations: [
 
@@ -15,6 +16,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatCheckboxModule,
     MatToolbarModule,
     MatIconModule,
+    LayoutModule,
+    MatGridListModule,
 
   ],
   exports: [
@@ -23,6 +26,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatCheckboxModule,
     MatToolbarModule,
     MatIconModule,
+    LayoutModule,
+    MatGridListModule
 
   ]
 })

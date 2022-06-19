@@ -1,10 +1,13 @@
 <div class="app-sidenav">
   <div class="app-sidenav-header">
     <h1>Menu</h1>
+    <button class="icon-button" mat-icon-button (click)="onClose()">
+      <mat-icon>close</mat-icon>
+    </button>
   </div>
   <div >
     <ul>
-      <li><button>Startseite</button></li>
+      <li><button [routerLink]="''" (click)="onClose()">Startseite</button></li>
       <li>
         <button *ngFor="let nav of navigation; let i = index;" (click)="onSelectNav(i)">
           {{ nav.title }} <mat-icon>navigate_next</mat-icon>

@@ -59,11 +59,11 @@ export class NavigationService {
       children: [
         {
           title: 'Ausbildung',
-          route: '/ausbildung'
+          route: 'employees/training'
         },
         {
           title: 'Jetzt bewerben',
-          route: '/bewerben'
+          route: '/employees/hiring'
         },
       ]
     },

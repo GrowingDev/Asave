@@ -1,4 +1,14 @@
-<div class="content-container">
-  <h1>Home</h1>
-</div>
+<div class="app-content">
+  <div class="app-home-header">
 
+  </div>
+  <mat-grid-list cols="2" rowHeight="300px" gutterSize="32px">
+    <mat-grid-tile
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

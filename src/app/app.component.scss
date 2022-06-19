@@ -37,12 +37,15 @@ h1.example-app-name {
 }
 
 .app-toolbar {
+  top:0;
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-color: $primary-background-color;
   border-bottom: $primary-border;
   min-height: 80px;
+  z-index:2;
 }
 
 .app-toolbar-element {
@@ -55,6 +58,7 @@ h1.example-app-name {
 }
 
 .icon-button {
+  position: absolute;
   color: $primary-color;
   background: none !important;
   border: none;
@@ -72,14 +76,14 @@ h1.example-app-name {
   align-items: flex-end !important;
 }
 
-
-
 .app-sidenav {
   min-width: 320px;
   background-color: $secondary-background-color;
   color: $secondary-color;
   border-left: $primary-border;
   height: 100vh;
+  overflow: hidden;
+
 }
 
 

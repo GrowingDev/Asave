@@ -39,9 +39,26 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .content-container{
+  position: a;
+  min-height: 100vh;
+  
+}
+
+.app-content {
   min-height: 100vh;
   background-image: url("./assets/images/app-background.png");
   background-position: center;
   background-attachment: fixed;
+  padding-top: 80px;
+  color:white;
+  font-size: 18px;
+  padding:16px;
 }
+
+.full-width{
+
+  max-width: 100vw;
+  width:100%;
+}
+
 

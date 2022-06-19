@@ -11,6 +11,7 @@ import { Navigation } from '../../shared/models/navigation.model';
 export class SidenavComponent implements OnInit {
 
   navigation: Navigation[] = [];
+  @Output() sidenav = new EventEmitter<boolean>();
   constructor(private navService: NavigationService) { }
 
   ngOnInit(): void {
@@ -18,6 +19,8 @@ export class SidenavComponent implements OnInit {
   }
   onSelectNav(index: number) {
     this.navService.onSelectNav(index)
-    console.log(index)
+  }
+  onClose(){
+    this.sidenav.emit(false)
   }
 }
