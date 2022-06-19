@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "asave-53589"
+  },
+  "targets": {
+    "asave-53589": {
+      "hosting": {
+        "client-v1": [
+          "asave-53589"
+        ]
+      }
+    }
   }
 }
