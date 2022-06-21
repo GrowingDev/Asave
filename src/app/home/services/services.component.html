@@ -1,0 +1,24 @@
+<mat-grid-list
+  cols="6"
+  rowHeight="300px"
+  gutterSize="32px"
+  [style.margin]="'0 auto'"
+>
+  <mat-grid-tile
+    *ngFor="let service of services"
+    [colspan]="expectedCols"
+    [rowspan]="1"
+    [style.backgroundImage]="
+      'url(/assets/images/' + service.imgPath + '-min.png)'
+    "
+    [style.backgroundImageSize]="'fit'"
+    [style.backgroundSize]="'cover'"
+    [style.backgroundPosition]="'center'"
+    [style.backgroundRepeat]="'no-repeat'"
+  >
+    <div class="service-card-label">
+      <h2>{{ service.title | singleWord: 0 }}</h2>
+      <h2 class="yellow">{{ service.title | singleWord: 1 }}</h2>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

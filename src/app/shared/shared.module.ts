@@ -6,9 +6,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {LayoutModule} from '@angular/cdk/layout';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
-
+  
   ],
   imports: [
     CommonModule,
@@ -18,6 +19,7 @@ import {LayoutModule} from '@angular/cdk/layout';
     MatIconModule,
     LayoutModule,
     MatGridListModule,
+    MatCardModule
 
   ],
   exports: [
@@ -27,7 +29,8 @@ import {LayoutModule} from '@angular/cdk/layout';
     MatToolbarModule,
     MatIconModule,
     LayoutModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule
 
   ]
 })

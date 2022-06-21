@@ -7,11 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './core/sidenav/sidenav.component';
 import { SidenavSubnavComponent } from './core/sidenav-subnav/sidenav-subnav.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    SidenavSubnavComponent
+    SidenavSubnavComponent,
   ],
   imports: [
     BrowserModule,

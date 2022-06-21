@@ -17,7 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
   navState: string = 'closed';
   navigationSubscription: Subscription;
 
-  constructor(private navService: NavigationService, breakpointObserver: BreakpointObserver) {
+  constructor(private navService: NavigationService, private breakpointObserver: BreakpointObserver) {
     this.isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)');
   }
 
@@ -37,7 +37,5 @@ export class AppComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     this.navigationSubscription.unsubscribe()
-    
-    
   }
 }

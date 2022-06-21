@@ -1,0 +1,27 @@
+<div>
+    <mat-grid-list
+      cols="6"
+      rowHeight="400px"
+      gutterSize="32px"
+
+      [style.margin]="'0 auto'"
+    >
+      <mat-grid-tile
+        *ngFor="let action of actions"
+        [colspan]="expectedCols"
+        [rowspan]="1"
+        [style.backgroundImage]="'url(/assets/images/' + action.imgPath + '-min.png)'"
+        [style.backgroundImageSize]="'fit'"
+        [style.backgroundSize]="'cover'"
+        [style.backgroundPosition]="'center'"
+        [style.backgroundRepeat]="'no-repeat'"
+        [style.maxHeight]=""
+
+      >
+        <div class="action-card-label">
+        <h2> {{action.title | singleWord: 0 }}</h2> 
+        <h2 class="yellow"> {{action.title | singleWord: 1 }}</h2> 
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
