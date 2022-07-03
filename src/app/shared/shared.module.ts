@@ -1,15 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatSidenavModule } from '@angular/material/sidenav'
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {LayoutModule} from '@angular/cdk/layout';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { LayoutModule } from '@angular/cdk/layout';
 import { MatCardModule } from '@angular/material/card';
+import { ContactComponent } from './contact/contact.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { TextInputComponent } from './text-input/text-input.component';
+import { TextAreaComponent } from './text-area/text-area.component';
+import { InputSelectComponent } from './input-select/input-select.component';
+import { MatSelectModule } from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+
 @NgModule({
   declarations: [
-  
+    ContactComponent,
+    TextInputComponent,
+    TextAreaComponent,
+    InputSelectComponent,
   ],
   imports: [
     CommonModule,
@@ -19,8 +32,13 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     LayoutModule,
     MatGridListModule,
-    MatCardModule
-
+    MatCardModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatSelectModule,
+    MatInputModule,
+    MatButtonModule
   ],
   exports: [
     CommonModule,
@@ -30,8 +48,14 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     LayoutModule,
     MatGridListModule,
-    MatCardModule
-
-  ]
+    MatCardModule,
+    ContactComponent,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

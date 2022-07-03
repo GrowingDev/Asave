@@ -1,7 +1,7 @@
 <div>
     <mat-grid-list
       cols="6"
-      rowHeight="400px"
+      rowHeight="300px"
       gutterSize="32px"
 
       [style.margin]="'0 auto'"
@@ -19,7 +19,7 @@
 
       >
         <div class="action-card-label">
-        <h2> {{action.title | singleWord: 0 }}</h2> 
+        <h2> {{action.title | singleWord: 0 }}&nbsp;</h2> 
         <h2 class="yellow"> {{action.title | singleWord: 1 }}</h2> 
         </div>
       </mat-grid-tile>

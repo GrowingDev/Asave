@@ -1,0 +1,16 @@
+<div class="contact-container">
+  <div class="contact-title">
+    <h1>noch fragen?</h1>
+    <div class="last-words">
+      <h1 class="yellow">kontaktieren&nbsp;</h1>
+      <h1>sie uns!</h1>
+    </div>
+  </div>
+    <form [formGroup]="contactForm" (submit)="onSubmit()" class="contact-form">
+      <app-input-select [options]="genders" label="Titel"></app-input-select>
+      <app-text-input hint="" label="Vor und Nachname" placeholder="Vor und Nachname eingeben" type="text" required="true"></app-text-input>
+      <app-text-input hint="" label="E-Mail" placeholder="E-Mail eingeben" type="mail" required="true"></app-text-input>
+      <app-text-area hint="" label="Ihre Nachricht an uns" placeholder="Ihre Nachricht an uns" type="text" required="true"></app-text-area>
+      <button mat-raised-button  type="submit">Anfrage versenden</button>
+    </form>
+</div>

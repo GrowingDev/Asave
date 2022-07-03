@@ -1,0 +1,102 @@
+.contact-container {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    padding: 1rem;
+    padding-bottom: 32px;
+    padding-top: 32px;
+}
+
+@media (min-width: 900px) {
+    .contact-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 64px;
+    }
+
+    .contact-form {
+        width: 50%;
+        max-width: 500px;
+
+    }
+}
+
+
+.contact-title {
+    margin: 32px 0 32px 0;
+    color: white;
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 24px;
+        letter-spacing: 0.2rem;
+
+    }
+
+    .last-words {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contact-title {
+
+        h1 {
+            font-size: 26px;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .contact-container {
+        padding: 64px
+    }
+
+    .contact-title {
+
+        h1 {
+            font-size: 29px;
+        }
+    }
+}
+
+::ng-deep {
+    .mat-raised-button {
+        color: black;
+        background-color: #FFFF39;
+        width: 100%;
+        text-transform: uppercase;
+        letter-spacing: 0.065em;
+        height: 50px;
+        margin-top: 16px;
+    }
+}
+
+.yellow {
+    color: #FFFF39;
+}
+
+/* .contact-body {
+    max-width: 400px;
+}
+
+
+
+
+.mat-form-field {
+    color: white;
+    border-color: white;
+}
+
+md-input-container:not(.md-input-invalid).md-input-focused .md-input {
+    border-color: white;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+ */

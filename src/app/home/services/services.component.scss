@@ -1,9 +1,9 @@
+
 .service-card-label {
+    box-sizing: border-box;
     position: absolute;
-    z-index: 10;
+    z-index: 8;
     bottom: 0;
-    left: 0;
-    right: 0;
     width: 100%;
     padding: 16px;
     color: white;
@@ -16,7 +16,9 @@
         text-transform: uppercase;
     }
 }
-
+.mat-grid-list {
+    width: 100%;
+}
 .mat-grid-tile {
     cursor: pointer;
 }

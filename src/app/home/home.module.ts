@@ -5,17 +5,26 @@ import { SharedModule } from '../shared/shared.module';
 import { ServicesComponent } from './services/services.component';
 import { ActionsComponent } from './actions/actions.component';
 import { SingleWordPipe } from '../shared/pipes/singleWord.pipe';
+import { HeaderComponent } from './header/header.component';
+import { SliderComponent } from './slider/slider.component';
+import { SliderItemComponent } from './slider/slider-item/slider-item.component';
+import {CdkStepperModule} from '@angular/cdk/stepper';
 
 @NgModule({
   declarations: [
     HomeComponent,
     ServicesComponent,
     ActionsComponent,
-    SingleWordPipe
+    SingleWordPipe,
+    HeaderComponent,
+    SliderComponent,
+    SliderItemComponent,
+
   ],
   imports: [
     SharedModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    CdkStepperModule,
   ]
 })
 export class HomeModule { }

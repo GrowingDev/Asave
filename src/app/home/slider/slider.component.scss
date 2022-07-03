@@ -1,0 +1,14 @@
+:host {
+    display: block;
+    overflow: hidden;
+    height: 100%;
+  
+  }
+  .panes {
+    height: 100%;
+    display: flex;
+    transition: 0.4s ease-in-out;
+  }
+  .panes div {
+    flex: 1;
+  }

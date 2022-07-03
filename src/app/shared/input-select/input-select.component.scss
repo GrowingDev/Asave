@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+::ng-deep{
+    // Get the color config from the theme.
+
+      .mat-select-value {
+          color: white;
+      }
+      .mat-select-arrow{
+          color: white;
+      }
+      .mat-select-panel{
+          background-color: rgb(5, 17, 54);
+      }
+      .mat-option-text {
+          color: white;
+      }
+      .mat-option:hover:not(.mat-option-disabled) {
+        color: #FFFF39;
+        .mat-option-text{
+            color:#FFFF39
+        }
+      }
+    .mat-form-field {border: none;}
+  }
+

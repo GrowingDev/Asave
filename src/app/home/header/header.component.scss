@@ -1,0 +1,56 @@
+.home-header-container {
+    width: 100%;
+    padding-top: 80px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+
+    .header-content-top {
+        flex-grow: 2;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-image: url('../../../assets/images/app-logo-neu.png');
+        background-position: top center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .header-content-bottom {
+        margin-top: 2rem;
+        flex-grow: initial;
+        text-align: center;
+        text-transform: uppercase;
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .last-words {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+
+}
+
+.pagination {
+    margin-top: 1rem;
+    min-height: 12px;
+
+    .pagination-item {
+        height: 12px;
+        width: 12px;
+        background-color: #FFFF39;
+        border-radius: 50px;
+        border: none;
+        margin: 4px;
+    }
+
+    .inactive {
+        background-color: gray;
+    }
+}

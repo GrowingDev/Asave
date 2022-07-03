@@ -11,11 +11,9 @@ const routes: Routes = [
   { path: 'gallery', loadChildren: () => import('./gallery/gallery.module').then(m => m.GalleryModule) },
   { path: 'legal', loadChildren: () => import('./legal/legal.module').then(m => m.LegalModule) },
   { path: 'impress', loadChildren: () => import('./impress/impress.module').then(m => m.ImpressModule) },
-
   { path: 'certificate', loadChildren: () => import('./certificate/certificate.module').then(m => m.CertificateModule) },
-
   { path: 'sponsoring', loadChildren: () => import('./sponsoring/sponsoring.module').then(m => m.SponsoringModule) },
-
+  { path: 'order-request', loadChildren: () => import('./order-request/order-request.module').then(m => m.OrderRequestModule) },
   { path: 'partner', loadChildren: () => import('./partner/partner.module').then(m => m.PartnerModule) },
 
 

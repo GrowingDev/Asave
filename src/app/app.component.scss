@@ -1,43 +1,9 @@
 @import "../variables";
 
-.app-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  min-height: 100vh;
-  background-image: url("../assets/images/app-background.png");
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.example-is-mobile .example-toolbar {
-  position: fixed;
-  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-  z-index: 2;
-}
-
-h1.example-app-name {
-  margin-left: 8px;
-}
-
-.example-sidenav-container {
-  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-  flex: 1;
-}
-
-.example-is-mobile .example-sidenav-container {
-  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
-     `<body>` to be our scrolling element for mobile layouts. */
-  flex: 1 0 auto;
-}
 
 .app-toolbar {
-  top:0;
+  top: 0;
+  left: 0;
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -45,7 +11,7 @@ h1.example-app-name {
   background-color: $primary-background-color;
   border-bottom: $primary-border;
   min-height: 80px;
-  z-index:9;
+  z-index: 9;
 }
 
 .app-toolbar-element {
@@ -86,5 +52,32 @@ h1.example-app-name {
 
 }
 
+.left {
+  align-items: flex-start;
+}
+
+.mat-sidenav-content {
+  overflow: hidden;
+  background-image: url("../assets/images/app-background.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #051136;
+  padding: 1rem;
+}
+
+@media (min-width:600px) {
+  .mat-sidenav-content {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
 
 
+}
+
+@media (min-width:1400px) {
+  .mat-sidenav-content {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
