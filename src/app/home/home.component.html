@@ -1,46 +1,57 @@
-    <div class="home-slider-container">
-      <app-slider #stepper>
-        <app-slider-item [expanded]="true">
-          <div class="slider-item-content-container">
-            <div class="slider-image-container"></div>
-            <div class="slider-action-container">
-              <h1>sicherheit</h1>
-              <div class="word-group">
-                <h1>durch</h1>
-                <h1 class="last-word">&nbsp;qualität</h1>
-              </div>
-              <button mat-raised-button  (click)="onOrderRequest()">jetzt anfragen</button>
-            </div>
+<div class="home-slider-container">
+  <app-slider #stepper>
+    <app-slider-item [expanded]="true">
+      <div class="slider-item-content-container">
+        <div class="slider-image-container"></div>
+        <div class="slider-action-container">
+          <h1>sicherheit</h1>
+          <div class="word-group">
+            <h1>durch</h1>
+            <h1 class="last-word">&nbsp;qualität</h1>
           </div>
-        </app-slider-item>
-        <app-slider-item [expanded]="true">
-          <div class="slider-item-content-container">
-            <div class="slider-image-container-b"></div>
-            <div class="slider-action-container">
-              <h1>feiern sie mit</h1>
-              <div class="word-group">
-                <h1>uns</h1>
-                <h1 class="last-word">&nbsp;jubiläum</h1>
-              </div>
-              <button mat-raised-button  (click)="onOrderRequest()">mehr erfahren</button>
-            </div>
-          </div>
-        </app-slider-item>
-      </app-slider>
-    </div>
-    <div id="slider-pagination-container">
-      <div>
-        <div class="pagination-item yellow" [class.selectedSlide]="stepper.step === 0"  (click)="stepper.moveStep()"></div>
-        <div class="pagination-item" [class.selectedSlide]="stepper.step === 1"  (click)="stepper.moveStep()"></div>
+          <button mat-raised-button (click)="onOrderRequest()">
+            jetzt anfragen
+          </button>
+        </div>
       </div>
- 
-      <mat-icon class="yellow bounce">keyboard_arrow_down</mat-icon>
-    </div>
-    <hr />
-    <app-services></app-services>
-    <hr />
-    <app-actions></app-actions>
-    <hr />
-    <app-contact></app-contact>
+    </app-slider-item>
+    <app-slider-item [expanded]="true">
+      <div class="slider-item-content-container">
+        <div class="slider-image-container-b"></div>
+        <div class="slider-action-container">
+          <h1>feiern sie mit</h1>
+          <div class="word-group">
+            <h1>uns</h1>
+            <h1 class="last-word">&nbsp;jubiläum</h1>
+          </div>
+          <button mat-raised-button (click)="onOrderRequest()">
+            mehr erfahren
+          </button>
+        </div>
+      </div>
+    </app-slider-item>
+  </app-slider>
+</div>
+<div id="slider-pagination-container">
+  <div>
+    <div
+      class="pagination-item yellow"
+      [class.selectedSlide]="stepper.step === 0"
+      (click)="stepper.moveStep()"
+    ></div>
+    <div
+      class="pagination-item"
+      [class.selectedSlide]="stepper.step === 1"
+      (click)="stepper.moveStep()"
+    ></div>
+  </div>
 
+  <mat-icon class="yellow bounce">keyboard_arrow_down</mat-icon>
+</div>
+<hr />
+<app-services></app-services>
+<hr />
+<app-actions></app-actions>
+<hr />
+<app-contact></app-contact>
 

@@ -5,8 +5,7 @@
     position="end"
     mode="over"
     role="navigation"
-    [class]="isSmallScreen ? 'app-sidenav full-width' : 'app-sidenav'"
-  >
+    [class]="isSmallScreen ? 'app-sidenav full-width' : 'app-sidenav'">
     <app-sidenav
       (navSelected)="onSelectedNav($event)"
       (sidenav)="sidenav.toggle()"
@@ -23,8 +22,7 @@
           *ngIf="!toggleBackButton"
           class="icon-button"
           mat-icon-button
-          (click)="onNavigateHome()"
-        >
+          (click)="onNavigateHome()">
           <mat-icon>chevron_left</mat-icon>
         </button>
       </div>
@@ -33,15 +31,23 @@
           src="../assets/images/app-logo.png"
           alt=""
           style="width: 120px; height: auto"
-          (click)="onNavigateHome()"
-        />
+          (click)="onNavigateHome()"/>
       </div>
       <div class="app-toolbar-element">
-        <button class="icon-button" mat-icon-button (click)="sidenav.toggle()">
+<!--         <button
+          class="icon-button"
+          mat-icon-button
+          (click)="sidenav.toggle()">
           <mat-icon>menu</mat-icon>
-        </button>
+        </button> -->
       </div>
     </mat-toolbar>
-      <router-outlet></router-outlet>
+    <router-outlet>
+     
+    </router-outlet>
+
   </mat-sidenav-content>
+
 </mat-sidenav-container>
+<!-- <app-footer></app-footer> -->
+

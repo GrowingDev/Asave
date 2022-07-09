@@ -16,6 +16,8 @@ import { TextAreaComponent } from './text-area/text-area.component';
 import { InputSelectComponent } from './input-select/input-select.component';
 import { MatSelectModule } from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     MatSelectModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   exports: [
     CommonModule,
@@ -55,7 +58,8 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     MatInputModule,
     MatSelectModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
 })
 export class SharedModule {}

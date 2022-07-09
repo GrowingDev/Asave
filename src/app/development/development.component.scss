@@ -1,0 +1,133 @@
+.dev-container {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    padding-top: 80px;
+    box-sizing: border-box;
+}
+
+.dev-box {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.dev-image {
+    flex: 1;
+    background-image: url('../../assets/images/app-logo-neu.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 350px;
+    width: 100%;
+}
+
+.dev-cto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.mat-raised-button {
+    color: black;
+    background-color: #FFFF39;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.065em;
+    height: 50px;
+    margin-top: 16px;
+}
+
+.dev-subtitle {
+    display: none;
+}
+.dev-title-mobile {
+    display: none;
+}
+.dev-slogan {
+    padding-top: 16px;
+    text-transform: uppercase;
+    text-align: center;
+
+    h1 {
+        margin: 0;
+        font-size: 39px;
+        color: white;
+    }
+
+    .word-group {
+        margin-top: 12px;
+        margin-bottom: 32px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+
+        .last-word {
+            color: #FFFF39;
+        }
+    }
+
+    .btn-action {
+        margin-top: 16px;
+    }
+}
+
+@media (min-width: 1050px) {
+    .dev-box {
+        padding: 32px;
+        flex-direction: row;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+
+    .dev-slogan {
+        flex-grow: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .dev-image {
+        min-height: 400px;
+        order: 2;
+        flex: 2;
+    }
+
+    .dev-title {
+        display: none;
+    }
+
+    .dev-title-mobile {
+        display: block;
+        
+    }
+    .word-group{
+        justify-content: flex-start !important;
+    }
+    .dev-cto {
+        order: 1;
+        flex: 3;
+    }
+
+    .dev-subtitle {
+        display: flex;
+        color: white;
+        text-align: start;
+        flex-direction: column;
+        font-size: 22px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .subtitle-first {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+}

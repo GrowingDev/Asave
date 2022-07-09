@@ -19,7 +19,6 @@ import {CdkStepperModule} from '@angular/cdk/stepper';
     HeaderComponent,
     SliderComponent,
     SliderItemComponent,
-
   ],
   imports: [
     SharedModule,
